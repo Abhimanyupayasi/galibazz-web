@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galibazz - Explore Categories</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#f2cc0d",
+                    "background-light": "#fcfbf8",
+                    "background-dark": "#221f10",
+                    "text-dark": "#1c190d",
+                    "text-muted": "#9c8e49",
+                },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"],
+                    "body": ["Noto Sans", "sans-serif"],
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #e5e7eb;
+        border-radius: 20px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+        background-color: #374151;
+    }.group:hover .group-hover\:block {
+        display: block;
+    }
+    .nav-item-highlight {
+        position: relative;
+    }
+    .nav-item-highlight::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #f2cc0d;
+        transition: width 0.3s ease;
+    }
+    .nav-item-highlight:hover::after {
+        width: 100%;
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark dark:text-gray-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#f4f1e7] dark:border-gray-800 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 gap-4">
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2 group" href="#">
+<div class="flex items-center justify-center size-10 rounded-xl bg-primary text-text-dark group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">sentiment_very_satisfied</span>
+</div>
+<span class="hidden md:block text-2xl font-black tracking-tight text-text-dark dark:text-white">Galibazz</span>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">Jokes <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Non-veg Jokes</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Veg Jokes</a>
+</div>
+</div>
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">News <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Latest News</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Fake News</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Youth News</a>
+</div>
+</div>
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">Sahitya <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Shayari</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Stories</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Kavita</a>
+</div>
+</div>
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">Entertainment <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Movies Info</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Suggestion Blogs</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Podcasts</a>
+</div>
+</div>
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">Online Tools <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full left-0 mt-1 w-56 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Educational Purpose</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">APK / Free Tools</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Image/Movie Tools</a>
+</div>
+</div>
+<div class="relative group">
+<a class="text-sm font-bold nav-item-highlight py-2 cursor-pointer flex items-center gap-1" href="#">Education <span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="absolute top-full right-0 mt-1 w-64 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-[#f4f1e7] dark:border-gray-800 hidden group-hover:block p-2 z-50">
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Learn Tools (Funny Way)</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Coding (Funny Way)</a>
+<a class="block px-4 py-2 text-sm hover:bg-background-light dark:hover:bg-gray-800 rounded-lg" href="#">Classes (Funny Way)</a>
+<div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+<a class="block px-4 py-2 text-xs text-text-muted hover:text-primary" href="#">View Coding Topics (HTML, CSS, JS...)</a>
+</div>
+</div>
+</nav>
+<div class="flex items-center gap-3">
+<div class="hidden xl:flex items-center bg-[#f4f1e7] dark:bg-gray-800 rounded-xl px-3 py-2 w-48 transition-all focus-within:w-64">
+<span class="material-symbols-outlined text-text-muted dark:text-gray-400">search</span>
+<input class="bg-transparent border-none outline-none text-sm w-full ml-2 text-text-dark dark:text-white placeholder-text-muted focus:ring-0" placeholder="Search..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-yellow-400 text-text-dark px-5 py-2.5 rounded-xl text-sm font-bold transition-colors shadow-sm whitespace-nowrap">
+                        Subscribe
+                    </button>
+<button class="lg:hidden p-2 text-text-dark dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex items-center gap-2 text-sm mb-8 text-text-muted">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-medium text-text-dark dark:text-gray-200">Explore Categories</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 border-b border-[#f4f1e7] dark:border-gray-800 pb-8">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-6xl font-black tracking-tight text-text-dark dark:text-white mb-4">
+                    Explore <span class="text-primary">Galibazz</span>
+</h1>
+<p class="text-lg md:text-xl text-text-muted dark:text-gray-400 leading-relaxed">
+                    Your versatile content hub. From hilarious jokes and "fake news" satire to deep-dive education and AdSense strategies. Learning and laughing in one place.
+                </p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<span class="text-sm font-medium text-text-muted hidden sm:block">Sort by:</span>
+<select class="bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-700 rounded-xl text-sm px-4 py-2.5 font-bold text-text-dark dark:text-white focus:ring-2 focus:ring-primary cursor-pointer shadow-sm">
+<option>Latest Updates</option>
+<option>Most Popular</option>
+<option>Trending Now</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">sentiment_very_satisfied</span>
+</div>
+<span class="font-bold text-sm">Jokes</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">newspaper</span>
+</div>
+<span class="font-bold text-sm">News</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="font-bold text-sm">Sahitya</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">movie</span>
+</div>
+<span class="font-bold text-sm">Entertain</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">build</span>
+</div>
+<span class="font-bold text-sm">Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-white dark:bg-gray-900 border border-[#f4f1e7] dark:border-gray-800 hover:border-primary hover:shadow-md transition-all group text-center" href="#">
+<div class="size-12 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">school</span>
+</div>
+<span class="font-bold text-sm">Education</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<div class="lg:col-span-8 flex flex-col gap-10">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-black text-text-dark dark:text-white">Fresh Content</h2>
+<div class="h-1 flex-grow bg-[#f4f1e7] dark:bg-gray-800 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Abstract yellow and white shapes representing earning money online">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBr_t5EkUEj3MnBlv1kRFztEMUwrrwAUUhGW74v2SneCqFdEfGtwkUJiXWBx6yuTpYPW_XwqLAEd3yruvCUN9PIRH1FIryMoORvECiAzB7toEse87f3_XTJFSYSbv3haTtzjcaQltARtBRh_3NTIKSw0flDAURL79h4GmxIJC6e0_6P3CS6RfxjJrZY24jeDiuNAkA1T4NL53mLyfQLgr21_xEAF8MeOJqv_Q3ymTCty5zhsvtTszPag1YqXUFomfzykXTaVx5ib_Tc');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                AdSense Tips
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                AdSense Approval Guide 2024: Fast Track Your Earnings
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                A step-by-step guide to getting your blog approved fast. Learn the secrets expert bloggers use to maximize revenue.
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 2 days ago</span>
+<span>•</span>
+<span>5 min read</span>
+</div>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Cartoon style teacher and student laughing in a classroom">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI11h8S8XglGyX9OCwQ7ox2jV1p2d2DW8Qb6l608-_fnsNat9m6KjzD_HSgg1AsUEFD5EmtGFmnnexKGoySGDK6_QG7dbANNluXSudeqhmyyVb-BWvNYQlRiQ9pF4SiQASAV4smPulO7EQjF94-DI4-7gFPLHiTkeNlF9E4ch158c4u_BxSoHCUSZku5KAcPBadFOSIjGzCfyDrd3I3DoA0M3LAjIxwqHg7kUb9oKkkzEo19P_sut9QLdcL00Su9wfplf8ueIsDfaB');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                Jokes
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                Teacher Student Jokes in Hindi: Classroom Fun
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                Laugh out loud with these classic classroom jokes. Perfect for lightening the mood during study breaks.
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 3 days ago</span>
+<span>•</span>
+<span>3 min read</span>
+</div>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Laptop displaying analytics chart with coins falling">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCS-lNGLpHHyxR_ETVJJ_AFQc7yceEhTXObdanAGeeT2uCcbhh8qIIVpg0bOK7MVWoKuIr41BCjaqpgm59kHuHdry0dHFNymYOM3yM-i27g528D3uJ3pdBDo-q2fYuC81deIhlVW6O0qSFuRiYJXfp9sPCfp1gxLG1yRsnAcepsSOrG_eEmui8cB3RhvEjNQMHCmBG97SyKEUhP6wTN0OjjIx4fy2J-QoPyv5zhbn1WHtlcTuX8ruUYcru6PBwNT_iD4QxXnO26Cc4');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                Finance
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                Top 5 High CPC Keywords for Bloggers in India
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                Maximize your earnings with these profitable topics. Don't waste time on low paying content.
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 4 days ago</span>
+<span>•</span>
+<span>8 min read</span>
+</div>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Group of friends laughing at a cafe">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEX8IgqeLqQpUOM-Uw0y9N8zq6gHbcwPo4ZP-jlJNTFfoMvBT2fO-nI-bhpdFaLBQxB3Pl1xVv0TRALHjWl1wE2ZV0KcoLsus1CVXC9gOj3f4lrP9RPJLW75M8Hweoa0-bKJLClAUPkJF2pFxbTbsMwIDAM9RNKk_kNwLEeqC5FNZJRraD5TuMi9j0y9q6EY13ukPZTrqmqbNzdGtwBcsyLYYG2MXIkEc9YgWbsHeDFmjGcJC00Omnn0GzfLv7Exx1SOv9T7PovQ-1');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                Humor
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                Funny Office Moments Compilation 2023
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                Relatable corporate humor to brighten your day. Send this to your boss if you dare!
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 5 days ago</span>
+<span>•</span>
+<span>4 min read</span>
+</div>
+</div>
+</article>
+</div>
+<div class="w-full rounded-2xl border-2 border-dashed border-[#e8e4ce] dark:border-gray-700 bg-[#f8f8f5] dark:bg-gray-800/50 p-6 flex flex-col items-center justify-center gap-4 py-12">
+<div class="text-center">
+<p class="text-text-dark dark:text-white font-bold text-lg mb-1">Advertisement Space</p>
+<p class="text-text-muted dark:text-gray-500 text-sm">Responsive Horizontal Banner (728x90)</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Magnifying glass on top of computer code">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6rm2IYTH5BA7aEBDjT7U-oUu5jpiQO3lcPiUW3wsfrysD_hmFPmqHtITGJPerAYepQnNinX_Y_lNw9V_3459P4Nv2HReP8wMxTahlK_5nYRSMVar7jplHffv-ERy99jseYF2p6bBVtIaCOBX0oGOzZ_I8lgsNoGgI0T2tiHUtHmd0mfj1D9f1ArhCiHNYST1CxO6lr3ro5QRFOT_OlnMg4avWM8Cn4smlT-daLMEFaATIeAHqgKPcRxvI4WkBdOhFgBjq5rH3xm67');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                SEO
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                How to Increase Organic Traffic: Simple SEO Hacks
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                Simple SEO strategies to boost your site visitors without spending a rupee on ads.
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 1 week ago</span>
+<span>•</span>
+<span>10 min read</span>
+</div>
+</div>
+</article>
+<article class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-2xl aspect-video bg-gray-200 dark:bg-gray-800" data-alt="Wordpress logo on a blue background">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_FPD9S3AOkymKjBKT-0FcsmitDBW_4Eyk7gGDnp7S3vRXc6Y7zJSMF1I79pdherLa_VW34_gJpLSaJ7Vs3XA0Jup_RbqgFCqLn3yV3iWTj7FzBY6BwDM4rPEi-8U08OPWrjHkfObW_rgLzhzFMwTeMDbFN9BoHE21AmPssn0oJOP4snYZ8015s3v91wf3J6rO9LMDOFaej90GtSGf1hFg8zlR_U7sl1-CVFXDWVUWuTw_h0PhkcgzYHxYEGy-6TNmz8X1n73uspiq');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs font-bold text-text-dark dark:text-primary uppercase tracking-wider shadow-sm border border-black/5">
+                                WordPress
+                            </div>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors dark:text-gray-100">
+                                Best WordPress Plugins for SEO &amp; Speed
+                            </h2>
+<p class="text-text-muted dark:text-gray-400 text-sm line-clamp-2">
+                                Essential tools every blogger needs installed immediately after setting up a site.
+                            </p>
+<div class="flex items-center gap-2 mt-1 text-xs font-medium text-text-muted/80 dark:text-gray-500">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 1 week ago</span>
+<span>•</span>
+<span>6 min read</span>
+</div>
+</div>
+</article>
+</div>
+<div class="flex items-center justify-center gap-2 mt-6">
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-text-dark font-bold shadow-sm">
+                        1
+                    </button>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted font-medium transition-colors dark:text-gray-400">
+                        2
+                    </button>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted font-medium transition-colors dark:text-gray-400">
+                        3
+                    </button>
+<span class="flex items-center justify-center size-10 text-text-muted">...</span>
+<button class="flex items-center justify-center size-10 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-text-muted transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="bg-white dark:bg-gray-900 rounded-2xl p-4 shadow-sm border border-[#f4f1e7] dark:border-gray-800">
+<div class="w-full aspect-[300/250] rounded-xl border-2 border-dashed border-[#e8e4ce] dark:border-gray-700 bg-[#f8f8f5] dark:bg-gray-800/50 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-4xl">ads_click</span>
+<div class="text-center">
+<p class="text-text-dark dark:text-white font-bold text-sm">Ad Space</p>
+<p class="text-text-muted dark:text-gray-500 text-xs">300x250 Banner</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-[#f4f1e7] dark:border-gray-800">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg text-text-dark dark:text-white">Popular Now</h3>
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<div class="flex flex-col gap-5">
+<a class="flex gap-4 group" href="#">
+<div class="size-16 rounded-lg bg-gray-200 flex-shrink-0 bg-cover bg-center" data-alt="Small thumbnail of coins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCC7DRi0rxcA9_gwcZ2etsGUKsk84n87pG08v8devGeE6p9IDRULnGju1zAjGlS2I9X_WNzu8-7jRTVlymJM7pJb_mpzN13uRCM6DEiWdQWq6dZCh_aBrRAUu-l_yacfqWAd4j8EOv6kfD45blyVEPQ9nR4GnoxuzixUwizDcIEkSQujsXrEvqq7Wj5NUPTYCt4OYUuPO1W9rmaJy7_IlmzxfAThZLvH8voFJD97UjmQByhdBugfGWkRrqmMrSgAnkf4txI5B0a79i5');"></div>
+<div>
+<h4 class="font-bold text-sm text-text-dark dark:text-gray-200 leading-snug group-hover:text-primary transition-colors line-clamp-2">How to verify your AdSense account in 3 steps</h4>
+<span class="text-xs text-text-muted mt-1 block">12k views</span>
+</div>
+</a>
+<a class="flex gap-4 group" href="#">
+<div class="size-16 rounded-lg bg-gray-200 flex-shrink-0 bg-cover bg-center" data-alt="Small thumbnail of a laughing emoji" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVNT9nGZH0GIz0oMcw9jBpzEfkRQPUcVXeiTkpGolyBGDPFQ0O9R_Hm8u5cmXxe4QRW_2z3-zqqiWiPCAXIaybUdyXv5RGLgbZoHUHk6rPLuXSLnPZhhjat6l4_oDLQwUa-bYUdRg0qixkjHbtwB8oHrBOyYaqVC3ox3P_LB_6iPzF274Mz_3N10NZQfC2TDCsjco2BID_z722QgWhfZEptJx_TIADo71zSWx-v2A0SF3dbl4iuTqDcutTa1fO-sMIW7uHx2h0WPPD');"></div>
+<div>
+<h4 class="font-bold text-sm text-text-dark dark:text-gray-200 leading-snug group-hover:text-primary transition-colors line-clamp-2">The funniest Hindi jokes of 2023 compilation</h4>
+<span class="text-xs text-text-muted mt-1 block">8.5k views</span>
+</div>
+</a>
+<a class="flex gap-4 group" href="#">
+<div class="size-16 rounded-lg bg-gray-200 flex-shrink-0 bg-cover bg-center" data-alt="Small thumbnail of a graduation cap" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoiMGH11-SohamRkYMhfNG5OtBKWEmCpy8OaGnwd07DN6QTM0lYw7VLs3DsDXuuck2WA2V8iLBw6GeYXkwqv7QRddmLL5ChpL3LwijwvKbehDIiVcglf8om1LyoVGKkY6QE14UkgaiCwRxA3fZ7q4Eg4rLUdwyoqL1-6AvgMV8EAU8-G4yPYQaaJa-OMH97-wyFPMUBGRqiQCnV-Q4Nvzweuq4bpEqmI8m5-DdCy458f4hRU-2Xzq33bgO9px18s_63Pj66QEyRLxH');"></div>
+<div>
+<h4 class="font-bold text-sm text-text-dark dark:text-gray-200 leading-snug group-hover:text-primary transition-colors line-clamp-2">Scholarship opportunities for Indian students abroad</h4>
+<span class="text-xs text-text-muted mt-1 block">6k views</span>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-primary/10 dark:bg-gray-800 rounded-2xl p-6 border border-primary/20 dark:border-gray-700 relative overflow-hidden">
+<div class="absolute -top-4 -right-4 size-24 rounded-full bg-primary/20 blur-xl"></div>
+<div class="size-12 bg-primary rounded-xl flex items-center justify-center text-text-dark mb-4 shadow-sm relative z-10">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h3 class="font-bold text-lg text-text-dark dark:text-white mb-2 relative z-10">Join Galibazz</h3>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-4 relative z-10">Stay updated with the best of Galibazz. Earning tips, jokes, and education delivered to you.</p>
+<form class="flex flex-col gap-3 relative z-10">
+<input class="w-full rounded-xl border-none bg-white dark:bg-gray-900 px-4 py-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-text-muted" placeholder="Enter your email" type="email"/>
+<button class="w-full bg-primary hover:bg-yellow-400 text-text-dark font-bold py-3 rounded-xl text-sm transition-colors shadow-sm" type="button">
+                            Subscribe Now
+                        </button>
+</form>
+<p class="text-xs text-text-muted/70 mt-3 text-center relative z-10">No spam, we promise.</p>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-[#f4f1e7] dark:border-gray-800">
+<h3 class="font-bold text-lg text-text-dark dark:text-white mb-4">Quick Topics</h3>
+<div class="flex flex-wrap gap-2">
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">AdSense</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Blogging</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Veg Jokes</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Shayari</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Fake News</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Coding</a>
+<a class="bg-background-light dark:bg-gray-800 hover:bg-primary/20 text-text-dark dark:text-gray-300 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border border-[#f4f1e7] dark:border-gray-700" href="#">Online Tools</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-[#f4f1e7] dark:border-gray-800 bg-white dark:bg-background-dark mt-16">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<div class="lg:col-span-2">
+<a class="flex items-center gap-2 mb-4" href="#">
+<div class="flex items-center justify-center size-8 rounded-lg bg-primary text-text-dark">
+<span class="material-symbols-outlined text-lg">sentiment_very_satisfied</span>
+</div>
+<span class="text-xl font-black tracking-tight text-text-dark dark:text-white">Galibazz</span>
+</a>
+<p class="text-sm text-text-muted dark:text-gray-400 mb-6 max-w-sm leading-relaxed">
+                    Galibazz is your go-to destination for diverse content ranging from humor to education. We help you learn, laugh, and grow every day.
+                </p>
+<div class="flex gap-3">
+<a class="size-8 rounded-full bg-background-light dark:bg-gray-800 flex items-center justify-center text-text-muted hover:bg-primary hover:text-text-dark transition-colors" href="#">
+<svg aria-hidden="true" class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="size-8 rounded-full bg-background-light dark:bg-gray-800 flex items-center justify-center text-text-muted hover:bg-primary hover:text-text-dark transition-colors" href="#">
+<svg aria-hidden="true" class="size-4" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.407-.06 4.123-.06h.08zm-1.63 2h-1.37c-3.141 0-4.329.17-5.513 1.294C2.559 6.47 2.364 7.57 2.364 10.743v2.514c0 3.173.195 4.273 1.438 5.449 1.184 1.124 2.372 1.294 5.513 1.294h1.37c3.141 0 4.329-.17 5.513-1.294 1.243-1.176 1.438-2.276 1.438-5.449v-2.514c0-3.173-.195-4.273-1.438-5.449C15.014 4.17 13.826 4 10.685 4zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="size-8 rounded-full bg-background-light dark:bg-gray-800 flex items-center justify-center text-text-muted hover:bg-primary hover:text-text-dark transition-colors" href="#">
+<svg aria-hidden="true" class="size-4" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-text-dark dark:text-white mb-4">Content</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Jokes &amp; Humor</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">News Satire</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sahitya</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Entertainment</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-dark dark:text-white mb-4">Resources</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Online Tools</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Educational Apps</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Coding Guides</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">AdSense Tips</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-dark dark:text-white mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-text-muted dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#f4f1e7] dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-muted dark:text-gray-500">
+<p>© 2024 Galibazz. All rights reserved.</p>
+<p>Made with <span class="material-symbols-outlined text-[14px] align-middle text-red-500">favorite</span> for creators.</p>
+</div>
+</div>
+</footer>
+</body></html>
