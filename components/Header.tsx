@@ -22,7 +22,7 @@ const navItems = [
   {
     name: "Sahitya",
     links: [
-      { name: "Shayari", href: "#" },
+      { name: "Shayari", href: "/news" },
       { name: "Stories", href: "#" },
       { name: "Kavita", href: "#" },
     ],
