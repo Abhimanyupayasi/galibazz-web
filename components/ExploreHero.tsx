@@ -11,18 +11,21 @@ export default function ExploreHero() {
 
   // text reveal
   useEffect(() => {
-    gsap.fromTo(
-      textRef.current?.children,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.15,
-        duration: 0.9,
-        ease: "power3.out",
-      }
-    );
-  }, []);
+  if (!textRef.current) return;
+
+  gsap.fromTo(
+    textRef.current.children,
+    { y: 40, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.15,
+      duration: 0.9,
+      ease: "power3.out",
+    }
+  );
+}, []);
+
 
   // marquee animation
   useEffect(() => {
