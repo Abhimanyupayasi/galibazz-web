@@ -4,7 +4,33 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+```bash# Galibazz Web – Open Source Blog Platform
+
+This is a **Next.js-powered open-source blog website**, built to allow easy contribution of new blog sections and articles through a simple folder and JSON-based structure.
+
+Repository:  
+`git@github.com:Abhimanyupayasi/galibazz-web.git`
+
+---
+
+## 🚀 Tech Stack
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Static JSON-based content**
+- SEO-friendly dynamic routing
+
+---
+
+## 📦 Getting Started
+
+Clone the repository:
+
 ```bash
+git clone git@github.com:Abhimanyupayasi/galibazz-web.git
+cd galibazz-web
+
 npm run dev
 # or
 yarn dev
