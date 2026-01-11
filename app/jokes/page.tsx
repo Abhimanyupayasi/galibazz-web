@@ -1,9 +1,11 @@
 import Link from "next/link";
 import jokes from "./jokes.json";
+import Header from "@/components/Header";
 
 export default function JokesPage() {
   return (
     <main>
+      <Header/>
       <h1>Jokes Categories</h1>
 
       <ul>

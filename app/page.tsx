@@ -11,7 +11,7 @@ export default function Page() {
       <Header />
       <main className="grow w-full bg-background-light">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-          <div className="flex items-center gap-2 text-sm mb-8 sm:mb-10 text-text-muted">
+          {/* <div className="flex items-center gap-2 text-sm mb-8 sm:mb-10 text-text-muted">
             <a className="hover:text-primary transition-colors" href="#">
               Home
             </a>
@@ -19,7 +19,7 @@ export default function Page() {
             <span className="font-medium text-text-dark">
               Explore Categories
             </span>
-          </div>
+          </div> */}
 
           <ExploreHero />
           <CategoryGrid />
