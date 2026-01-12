@@ -81,10 +81,11 @@
       "Why did the teddy bear say no to dessert? Because it was stuffed!"
     ]
   },
+
   {
     "title": "Random Jokes",
     "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
+    "slug": "random-jokes-1",
     "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
     "seo": {
       "title": "Random Funny Jokes",
@@ -101,7 +102,7 @@
   {
     "title": "Random Jokes",
     "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
+    "slug": "random-jokes-2",
     "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
     "seo": {
       "title": "Random Funny Jokes",
@@ -118,97 +119,7 @@
   {
     "title": "Random Jokes",
     "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
-    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-    "seo": {
-      "title": "Random Funny Jokes",
-      "description": "Enjoy random jokes anytime.",
-      "ogTitle": "Random Jokes",
-      "ogDescription": "Anything can happen.",
-      "twitterTitle": "Random Jokes",
-      "twitterDescription": "Random laughs."
-    },
-    "jokes": [
-      "I told my computer I needed a break, and it said: No problem — it froze."
-    ]
-  }
-  ,
-  {
-    "title": "Random Jokes",
-    "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
-    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-    "seo": {
-      "title": "Random Funny Jokes",
-      "description": "Enjoy random jokes anytime.",
-      "ogTitle": "Random Jokes",
-      "ogDescription": "Anything can happen.",
-      "twitterTitle": "Random Jokes",
-      "twitterDescription": "Random laughs."
-    },
-    "jokes": [
-      "I told my computer I needed a break, and it said: No problem — it froze."
-    ]
-  }
-  ,
-  {
-    "title": "Random Jokes",
-    "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
-    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-    "seo": {
-      "title": "Random Funny Jokes",
-      "description": "Enjoy random jokes anytime.",
-      "ogTitle": "Random Jokes",
-      "ogDescription": "Anything can happen.",
-      "twitterTitle": "Random Jokes",
-      "twitterDescription": "Random laughs."
-    },
-    "jokes": [
-      "I told my computer I needed a break, and it said: No problem — it froze."
-    ]
-  }
-  ,
-  {
-    "title": "Random Jokes",
-    "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
-    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-    "seo": {
-      "title": "Random Funny Jokes",
-      "description": "Enjoy random jokes anytime.",
-      "ogTitle": "Random Jokes",
-      "ogDescription": "Anything can happen.",
-      "twitterTitle": "Random Jokes",
-      "twitterDescription": "Random laughs."
-    },
-    "jokes": [
-      "I told my computer I needed a break, and it said: No problem — it froze."
-    ]
-  }
-  ,
-  {
-    "title": "Random Jokes",
-    "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
-    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
-    "seo": {
-      "title": "Random Funny Jokes",
-      "description": "Enjoy random jokes anytime.",
-      "ogTitle": "Random Jokes",
-      "ogDescription": "Anything can happen.",
-      "twitterTitle": "Random Jokes",
-      "twitterDescription": "Random laughs."
-    },
-    "jokes": [
-      "I told my computer I needed a break, and it said: No problem — it froze."
-    ]
-  }
-  ,
-  {
-    "title": "Random Jokes",
-    "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
+    "slug": "random-jokes-3",
     "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
     "seo": {
       "title": "Random Funny Jokes",
@@ -225,7 +136,7 @@
   {
     "title": "Random Jokes",
     "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
+    "slug": "random-jokes-4",
     "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
     "seo": {
       "title": "Random Funny Jokes",
@@ -238,12 +149,11 @@
     "jokes": [
       "I told my computer I needed a break, and it said: No problem — it froze."
     ]
-  }
-  ,
+  },
   {
     "title": "Random Jokes",
     "description": "A mix of random funny jokes.",
-    "slug": "random-jokes",
+    "slug": "random-jokes-5",
     "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
     "seo": {
       "title": "Random Funny Jokes",
@@ -257,5 +167,4 @@
       "I told my computer I needed a break, and it said: No problem — it froze."
     ]
   }
-  
 ]
