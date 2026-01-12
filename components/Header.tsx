@@ -7,8 +7,8 @@ const navItems = [
   {
     name: "Jokes",
     links: [
-      { name: "Non-veg Jokes", href: "#" },
-      { name: "Veg Jokes", href: "#" },
+      { name: "Non-veg Jokes", href: "/jokes" },
+      { name: "Veg Jokes", href: "/jokes" },
     ],
   },
   {
