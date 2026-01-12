@@ -1,6 +1,6 @@
 import jokes from "@/app/jokes/jokes.json";
 
-const SITE_URL = "https://galibazz.com";
+const SITE_URL = "https://galibazz.lol";
 
 export default async function sitemap() {
   const languages = ["en", "hi"];
