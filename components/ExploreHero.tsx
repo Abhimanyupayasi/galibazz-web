@@ -11,18 +11,21 @@ export default function ExploreHero() {
 
   // text reveal
   useEffect(() => {
-    gsap.fromTo(
-      textRef.current?.children,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.15,
-        duration: 0.9,
-        ease: "power3.out",
-      }
-    );
-  }, []);
+  if (!textRef.current) return;
+
+  gsap.fromTo(
+    textRef.current.children,
+    { y: 40, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.15,
+      duration: 0.9,
+      ease: "power3.out",
+    }
+  );
+}, []);
+
 
   // marquee animation
   useEffect(() => {
@@ -38,16 +41,18 @@ export default function ExploreHero() {
   // 👉 Your image list (replace later with your real images)
 // 👉 Online demo images (auto-loaded from Unsplash)
 const images = [
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400",
-  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=400",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400",
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=400",
-  "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?q=80&w=400",
-  "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400",
-  "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?q=80&w=400",
-  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400",
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+  "https://i.pinimg.com/736x/4b/07/7e/4b077ea531a5c5bafbd0be122005d63c.jpg",
+  "https://i.pinimg.com/736x/4c/19/46/4c19463eafe3632d17b1c56a4c3ab078.jpg",
+  "https://i.pinimg.com/736x/c9/ed/a2/c9eda2a03b9e50dd9bb1cfba1e730626.jpg",
+  "https://i.pinimg.com/736x/b0/54/cd/b054cdaef7a4ab7b01251a0e207bba5d.jpg",
+  "https://i.pinimg.com/736x/d6/da/c9/d6dac99c1addfb98697fec25f2ae9291.jpg",
+  "https://i.pinimg.com/736x/a0/8a/0d/a08a0da6dc0b3f88f725e4be4c75817c.jpg",
+  "https://i.pinimg.com/736x/b1/3b/cb/b13bcb64b8d08e891ceb21366decc336.jpg",
+  "https://i.pinimg.com/736x/9b/a0/94/9ba094771681dfa3cefc4836b7bff455.jpg",
+  "https://i.pinimg.com/736x/1b/f2/04/1bf2046980b0f7ac4c7aa5586757614c.jpg",
+  "https://i.pinimg.com/736x/f8/1d/a4/f81da41fc4221a6bfdf7735da218b1c6.jpg",
+  "https://i.pinimg.com/736x/7f/c5/2b/7fc52bb93e63f840e8845c45bb1d26cc.jpg",
+  "https://i.pinimg.com/736x/a6/a2/8a/a6a28a1003f5dda20997b7afa5a5e735.jpg",
 ];
 
  return (
@@ -112,9 +117,9 @@ const images = [
             <div
               key={i}
               className="
-                w-[90px] h-[90px]
-                sm:w-[120px] sm:h-[120px]
-                lg:w-[140px] lg:h-[140px]
+                w-[170px] h-[90px]
+                sm:w-[220px] sm:h-[120px]
+                lg:w-[240px] lg:h-[140px]
                 mx-1 sm:mx-2 
                 rounded-lg sm:rounded-xl 
                 overflow-hidden 
