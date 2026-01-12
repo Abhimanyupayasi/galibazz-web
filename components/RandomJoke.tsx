@@ -12,12 +12,21 @@ export default function RandomJoke() {
     setJoke(random.joke);
   }, []);
 
-  if (!joke) return null; // prevents SSR mismatch
-
   return (
-    <div
-      className="text-lg text-gray-800 mt-4 bg-white/5 border border-white/10 rounded-lg px-5 py-3"
-      dangerouslySetInnerHTML={{ __html: joke }}
-    />
+    <>
+      {!joke ? (
+        /* Skeleton */
+        <div className="max-w-xl mx-auto mt-4 space-y-3">
+          <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse"></div>
+          <div className="h-4 bg-gray-300 rounded w-full animate-pulse"></div>
+        </div>
+      ) : (
+        /* Joke Loaded */
+        <div
+          className="text-lg text-gray-800 mt-4 bg-white/5 border border-white/10 rounded-lg px-5 py-3"
+          dangerouslySetInnerHTML={{ __html: joke }}
+        />
+      )}
+    </>
   );
 }

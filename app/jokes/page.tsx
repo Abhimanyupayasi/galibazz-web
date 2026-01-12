@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import jokes from "./jokes.json";
 import Header from "@/components/Header";
 import JokesHero from "@/components/JokesHero";
@@ -22,11 +23,8 @@ export default async function JokesPage({ searchParams }: Props) {
   return (
     <main>
       <Header />
-
-      {/* HERO */}
       <JokesHero />
 
-      {/* CARDS SECTION */}
       <section className="max-w-6xl mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">
           Joke Categories
@@ -39,14 +37,18 @@ export default async function JokesPage({ searchParams }: Props) {
               className="bg-white rounded-xl shadow-md overflow-hidden 
                          transform transition duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              {/* Image */}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-48 w-full object-cover"
-              />
+              {/* ✅ Optimized Image */}
+              <div className="relative h-48 w-full">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority={index < 3} 
+                />
+              </div>
 
-              {/* Content */}
               <div className="p-5">
                 <h3 className="text-xl font-semibold mb-2">
                   {item.title}
@@ -67,10 +69,9 @@ export default async function JokesPage({ searchParams }: Props) {
         </div>
       </section>
 
-      {/* PAGINATION */}
+      {/* Pagination unchanged */}
       {totalPages > 1 && (
         <section className="flex justify-center gap-3 pb-16">
-
           {currentPage > 1 && (
             <Link
               href={`/jokes?page=${currentPage - 1}`}
@@ -105,7 +106,6 @@ export default async function JokesPage({ searchParams }: Props) {
               Next →
             </Link>
           )}
-
         </section>
       )}
     </main>
