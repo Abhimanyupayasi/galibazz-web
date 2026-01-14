@@ -1,58 +1,74 @@
 "use client";
 
 import Link from "next/link";
-
-const categories = [
-  {
-    name: "Jokes",
-    icon: "sentiment_very_satisfied",
-    bgColor: "bg-yellow-100",
-    textColor: "text-yellow-600",
-    href: "/jokes",
-  },
-  {
-    name: "News",
-    icon: "newspaper",
-    bgColor: "bg-blue-100",
-    textColor: "text-blue-600",
-    href: "/news",
-  },
-  {
-    name: "Sahitya",
-    icon: "menu_book",
-    bgColor: "bg-purple-100",
-    textColor: "text-purple-600",
-    href: "/upcoming",
-  },
-  {
-    name: "Entertainment",
-    icon: "movie",
-    bgColor: "bg-pink-100",
-    textColor: "text-pink-600",
-    href: "/upcoming",
-  },
-  {
-    name: "Tools",
-    icon: "build",
-    bgColor: "bg-green-100",
-    textColor: "text-green-600",
-    href: "/upcoming",
-  },
-  {
-    name: "Education",
-    icon: "school",
-    bgColor: "bg-orange-100",
-    textColor: "text-orange-600",
-    href: "/upcoming",
-  },
-];
+import { usePathname } from "next/navigation";
 
 export default function CategoryGrid() {
+  const pathname = usePathname();
+
+  // Detect language
+  const isHindi = pathname.startsWith("/hi");
+
+  // Prefix routes correctly
+  const prefix = isHindi ? "/hi" : "/en";
+
+  // ===== CATEGORY DATA =====
+  const categories = [
+    {
+      key: "jokes",
+      icon: "sentiment_very_satisfied",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-600",
+      href: `${prefix}/jokes`,
+      name: isHindi ? "जोक्स" : "Jokes",
+    },
+    {
+      key: "news",
+      icon: "newspaper",
+      bgColor: "bg-blue-100",
+      textColor: "text-blue-600",
+      href: `${prefix}/news`,
+      name: isHindi ? "समाचार" : "News",
+    },
+    {
+      key: "sahitya",
+      icon: "menu_book",
+      bgColor: "bg-purple-100",
+      textColor: "text-purple-600",
+      href: `${prefix}/upcoming`,
+      name: isHindi ? "साहित्य" : "Sahitya",
+    },
+    {
+      key: "entertainment",
+      icon: "movie",
+      bgColor: "bg-pink-100",
+      textColor: "text-pink-600",
+      href: `${prefix}/upcoming`,
+      name: isHindi ? "मनोरंजन" : "Entertainment",
+    },
+    {
+      key: "tools",
+      icon: "build",
+      bgColor: "bg-green-100",
+      textColor: "text-green-600",
+      href: `${prefix}/upcoming`,
+      name: isHindi ? "टूल्स" : "Tools",
+    },
+    {
+      key: "education",
+      icon: "school",
+      bgColor: "bg-orange-100",
+      textColor: "text-orange-600",
+      href: `${prefix}/upcoming`,
+      name: isHindi ? "शिक्षा" : "Education",
+    },
+  ];
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 mb-12 sm:mb-14">
       {categories.map((category) => (
         <Link
-          key={category.name}
+          key={category.key}
           href={category.href}
           className="
             flex flex-col items-center justify-center gap-3 
