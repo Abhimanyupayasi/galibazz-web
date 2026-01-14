@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { langAlternates } from "@/lib/langAlternates";
+import JokeShareBar from "@/components/JokeShareBar";
+
 type Props = {
   params: Promise<{ slug: string }>;
   searchParams?: Promise<{ page?: string }>;
@@ -62,15 +64,15 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
   return (
     <>
       {/* Header above arrows */}
-      <div className="relative z-20">
+      <div className="z-20 fixed top-0 left-0 w-full">
         <Header />
       </div>
 
-      <main className="bg-gray-50 text-gray-900 min-h-screen relative">
+      <main className="bg-gray-50 top-9 text-gray-900 min-h-screen relative">
 
         {/* ===== FIXED CATEGORY ARROWS ===== */}
         <Link
-          href={`/jokes/${prevCategory.slug}`}
+          href={`/en/jokes/${prevCategory.slug}`}
           aria-label="Previous Category"
           className="
             fixed left-3 top-1/2 -translate-y-1/2 
@@ -82,7 +84,7 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
         </Link>
 
         <Link
-          href={`/jokes/${nextCategory.slug}`}
+          href={`/en/jokes/${nextCategory.slug}`}
           aria-label="Next Category"
           className="
             fixed right-3 top-1/2 -translate-y-1/2 
@@ -110,44 +112,48 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
               <img
                 src={jokeCategory.image}
                 alt={jokeCategory.title}
-                className="w-52 h-52 object-cover rounded-xl shadow-md"
+                className=" h-52 object-cover rounded-xl shadow-md"
               />
             </div>
           </section>
 
           {/* ===== JOKES LIST ===== */}
           <section className="pb-10 space-y-6">
-            {paginatedJokes.map((content, index) => (
-              <div
-                key={index}
-                className="
-                  bg-white rounded-xl border border-gray-100 
-                  p-6 text-lg text-gray-800 leading-relaxed 
-                  shadow-sm overflow-hidden
-                "
-              >
-                <div
-                  className="
-                    prose max-w-none
-                    [&_pre]:whitespace-pre-wrap
-                    [&_pre]:break-words
-                    [&_pre]:bg-gray-100
-                    [&_pre]:p-4
-                    [&_pre]:rounded-lg
-                    [&_pre]:overflow-x-auto
-                  "
-                  dangerouslySetInnerHTML={{ __html: content }}
-                />
-              </div>
-            ))}
-          </section>
+  {paginatedJokes.map((content, index) => {
+    const formatted = content.replace(/\n/g, "<br/>");
+
+    // current page link for sharing
+    const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/en/jokes/${slug}`;
+
+    return (
+      <div
+        key={index}
+        className="
+          bg-white rounded-2xl border border-gray-200
+          p-6 md:p-7 text-lg text-gray-800 leading-relaxed
+          shadow-sm hover:shadow-md transition
+        "
+      >
+        {/* Joke Text */}
+        <div
+          className="prose max-w-none"
+          dangerouslySetInnerHTML={{ __html: formatted }}
+        />
+
+        {/* Share Icons */}
+        <JokeShareBar text={content} pageUrl={pageUrl} />
+      </div>
+    );
+  })}
+</section>
+
 
           {/* ===== PAGINATION INSIDE CATEGORY ===== */}
           {totalPages > 1 && (
             <section className="pb-12 flex justify-center gap-3 flex-wrap">
               {currentPage > 1 && (
                 <Link
-                  href={`/jokes/${slug}?page=${currentPage - 1}`}
+                  href={`/en/jokes/${slug}?page=${currentPage - 1}`}
                   className="px-4 py-2 bg-white border rounded-md hover:bg-gray-100"
                 >
                   ← Prev
@@ -159,7 +165,7 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
                 return (
                   <Link
                     key={pageNum}
-                    href={`/jokes/${slug}?page=${pageNum}`}
+                    href={`/en/jokes/${slug}?page=${pageNum}`}
                     className={`px-4 py-2 rounded-md border ${
                       pageNum === currentPage
                         ? "bg-gray-900 text-white"
@@ -173,7 +179,7 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
 
               {currentPage < totalPages && (
                 <Link
-                  href={`/jokes/${slug}?page=${currentPage + 1}`}
+                  href={`/en/jokes/${slug}?page=${currentPage + 1}`}
                   className="px-4 py-2 bg-white border rounded-md hover:bg-gray-100"
                 >
                   Next →
@@ -185,14 +191,14 @@ export default async function JokeSlugPage({ params, searchParams }: Props) {
           {/* ===== PREV / NEXT CATEGORY TITLES ===== */}
           <section className="pb-16 flex justify-between text-sm text-gray-600">
             <Link
-              href={`/jokes/${prevCategory.slug}`}
+              href={`/en/jokes/${prevCategory.slug}`}
               className="hover:text-gray-900"
             >
               ← {prevCategory.title}
             </Link>
 
             <Link
-              href={`/jokes/${nextCategory.slug}`}
+              href={`/en/jokes/${nextCategory.slug}`}
               className="hover:text-gray-900"
             >
               {nextCategory.title} →
