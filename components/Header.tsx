@@ -15,22 +15,22 @@ const dict = {
       {
         name: "Jokes",
         links: [
-          { name: "Non-veg Jokes", href: "/jokes" },
-          { name: "Veg Jokes", href: "/jokes" },
+          { name: "Non-veg Jokes", href: "/en/jokes" },
+          { name: "Veg Jokes", href: "/en/jokes" },
         ],
       },
       {
         name: "News",
         links: [
-          { name: "Latest News", href: "/news" },
-          { name: "Fake News", href: "/news" },
-          { name: "Youth News", href: "/news" },
+          { name: "Latest News", href: "/en/news" },
+          { name: "Fake News", href: "/upcoming" },
+          { name: "Youth News", href: "/upcoming" },
         ],
       },
       {
         name: "Sahitya",
         links: [
-          { name: "Shayari", href: "/news" },
+          { name: "Shayari", href: "/upcoming" },
           { name: "Stories", href: "/upcoming" },
           { name: "Kavita", href: "/upcoming" },
         ],

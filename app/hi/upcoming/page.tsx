@@ -17,7 +17,7 @@ export default function UpcomingPage() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            This Page Is Coming Soon  
+            This Page Is Coming Soon
             <br />
             <span className="text-lg font-semibold text-gray-700">
               यह पेज जल्द ही आ रहा है
