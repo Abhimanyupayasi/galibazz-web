@@ -7,7 +7,7 @@ export default function Page(props:any) {
     <ListingTemplate
       {...props}
       data={jokes}
-      basePath="/hi/jokes"
+      basePath="/en/jokes"
       title="Joke Categories"
       hero={<JokesHero />}
     />
