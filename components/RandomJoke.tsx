@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import randomJokes from "@/app/jokes/random-jokes.json";
+import randomJokes from "@/data/random-jokes.json";
 
 export default function RandomJoke() {
   const [joke, setJoke] = useState<string | null>(null);

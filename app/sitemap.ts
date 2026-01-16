@@ -1,15 +1,39 @@
-import jokes from "@/app/jokes/jokes.json";
+import type { MetadataRoute } from "next";
+import jokes from "./en/jokes/jokes.json";
 
 const SITE_URL = "https://galibazz.lol";
 
-export default async function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
   const languages = ["en", "hi"];
+  const lastModified = new Date();
 
-  // Category pages
-  const categoryUrls = languages.flatMap((lang) =>
-    jokes.map((joke) => ({
+  // Home pages (/, /en, /hi)
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: SITE_URL,
+      lastModified,
+      alternates: {
+        languages: {
+          en: `${SITE_URL}/en`,
+          hi: `${SITE_URL}/hi`,
+        },
+      },
+    },
+    {
+      url: `${SITE_URL}/en`,
+      lastModified,
+    },
+    {
+      url: `${SITE_URL}/hi`,
+      lastModified,
+    },
+  ];
+
+  // Joke category pages
+  const jokePages: MetadataRoute.Sitemap = jokes.flatMap((joke) =>
+    languages.map((lang) => ({
       url: `${SITE_URL}/${lang}/jokes/${joke.slug}`,
-      lastModified: new Date(),
+      lastModified,
       alternates: {
         languages: {
           en: `${SITE_URL}/en/jokes/${joke.slug}`,
@@ -19,11 +43,5 @@ export default async function sitemap() {
     }))
   );
 
-  // Static pages
-  const staticUrls = languages.map((lang) => ({
-    url: `${SITE_URL}/${lang}`,
-    lastModified: new Date(),
-  }));
-
-  return [...staticUrls, ...categoryUrls];
+  return [...staticPages, ...jokePages];
 }
