@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import jokes from "@/app/jokes/jokes.json";
+import jokes from "./en/jokes/jokes.json";
 
 const SITE_URL = "https://galibazz.lol";
 
