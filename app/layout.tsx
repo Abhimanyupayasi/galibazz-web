@@ -15,6 +15,9 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
   title: "Galibazz - Explore Categories",
   description: "Your versatile content hub. From hilarious jokes and 'fake news' satire to deep-dive education and AdSense strategies.",
+  other: {
+    "google-adsense-account": "ca-pub-4665029971539939",
+  },
 };
 
 export default function RootLayout({
