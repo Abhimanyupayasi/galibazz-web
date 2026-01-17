@@ -17,6 +17,7 @@ const dict = {
         links: [
           { name: "Non-veg Jokes", href: "/en/jokes" },
           { name: "Veg Jokes", href: "/en/jokes" },
+          { name: "Hindi Jokes", href: "/en/jokes/hindi-jokes" },
         ],
       },
       {
@@ -56,6 +57,7 @@ const dict = {
         links: [
           { name: "नॉन-वेज जोक्स", href: "/hi/jokes" },
           { name: "वेज जोक्स", href: "/hi/jokes" },
+          { name: "हिंदी जोक्स", href: "/hi/jokes/hindi-jokes" },
         ],
       },
       {
