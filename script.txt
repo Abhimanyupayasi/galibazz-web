@@ -1,0 +1,3 @@
+node scripts/fetchExternalJokes.js
+    Fetching external jokes...
+    Fetched and saved 100 jokes to ./data/external-jokes.json
