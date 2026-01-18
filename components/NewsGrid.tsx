@@ -4,6 +4,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { NewsItem } from "@/types/news";
 
+/* 🔥 Emoji mapping */
+const badgeEmoji: Record<string, string> = {
+  viral: "🔥",
+  hot: "🥵",
+  latest: "⚡",
+};
+
 export default function NewsGrid({ news }: { news: NewsItem[] }) {
   return (
     <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -15,10 +22,10 @@ export default function NewsGrid({ news }: { news: NewsItem[] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.05 }}
         >
-          <Link href={`/news/${item.slug}`} className="block h-full">
+          <Link href={`/en/news/${item.slug}`} className="block h-full">
             <article className="group relative h-full rounded-2xl overflow-hidden bg-white border border-zinc-200 shadow-sm hover:shadow-xl hover:border-yellow-400 transition-all">
 
-              {/* Image */}
+              {/* 🖼 Image */}
               <div className="overflow-hidden">
                 <img
                   src={item.poster}
@@ -27,30 +34,45 @@ export default function NewsGrid({ news }: { news: NewsItem[] }) {
                 />
               </div>
 
-              {/* Content */}
+              {/* 📄 Content */}
               <div className="p-5 space-y-3">
 
-                {/* Badge */}
+                {/* 🏷 Badge */}
                 <span
-                  className={`inline-block text-xs font-bold px-3 py-1 rounded-full
-                  ${item.what === "viral" && "bg-red-500 text-white"}
-                  ${item.what === "hot" && "bg-orange-500 text-white"}
-                  ${item.what === "latest" && "bg-yellow-400 text-black"}`}
+                  className={`inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full
+                  ${item.what === "viral" && "bg-red-600 text-white"}
+                  ${item.what === "latest" && "bg-yellow-400 text-black"}
+                  ${
+                    item.what === "hot" &&
+                    "bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white shadow-lg"
+                  }`}
                 >
-                  🔥 {item.what.toUpperCase()}
+                  {/* Emoji with glow for HOT */}
+                  <span
+                    className={`${
+                      item.what === "hot"
+                        ? "text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.9)]"
+                        : ""
+                    }`}
+                  >
+                    {badgeEmoji[item.what] ?? "📰"}
+                  </span>
+                  {item.what.toUpperCase()}
                 </span>
 
-                <h2 className="text-lg font-bold group-hover:text-yellow-600">
+                {/* 📰 Title */}
+                <h2 className="text-lg font-bold group-hover:text-yellow-600 transition-colors">
                   {item.title}
                 </h2>
 
+                {/* ℹ Meta */}
                 <div className="text-sm text-zinc-500 flex flex-wrap gap-3">
                   <span>✍️ {item.author}</span>
                   <span>📅 {item.date}</span>
                   <span>⏰ {item.time}</span>
                 </div>
 
-                {/* Tags */}
+                {/* 🔖 Tags */}
                 <div className="flex flex-wrap gap-2 pt-2">
                   {item.tags.map(tag => (
                     <span
@@ -61,6 +83,7 @@ export default function NewsGrid({ news }: { news: NewsItem[] }) {
                     </span>
                   ))}
                 </div>
+
               </div>
             </article>
           </Link>
