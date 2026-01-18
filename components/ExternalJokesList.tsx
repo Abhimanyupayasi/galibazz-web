@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import JokeShareBar from "@/components/JokeShareBar";
-import jokes from "@/data/external-jokes.json"; // ✅ direct JSON import
+import defaultJokes from "@/data/external-jokes.json"; // ✅ fallback JSON
 
 type Joke = {
   id: number;
@@ -21,10 +21,14 @@ function formatJoke(text: string) {
 
 export default async function ExternalJokesList({
   page,
+  data,
 }: {
   page: number;
+  data?: Joke[]; // ✅ optional external JSON
 }) {
-  // ✅ jokes come directly from JSON
+  // ✅ If data passed use it, otherwise fallback to default
+  const jokes: Joke[] = data && data.length > 0 ? data : defaultJokes;
+
   const totalPages = Math.ceil(jokes.length / JOKES_PER_PAGE);
   const start = (page - 1) * JOKES_PER_PAGE;
   const paginated = jokes.slice(start, start + JOKES_PER_PAGE);
@@ -33,8 +37,7 @@ export default async function ExternalJokesList({
 
   return (
     <section className="max-w-4xl mx-auto px-4 space-y-6">
-
-      {paginated.map((joke: Joke) => (
+      {paginated.map((joke) => (
         <div
           key={joke.id}
           className="bg-white border rounded-xl shadow-sm p-5 text-lg hover:shadow-md transition"
@@ -50,7 +53,6 @@ export default async function ExternalJokesList({
       {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-4 pt-8">
-
           {page > 1 && (
             <Link
               href={`?page=${page - 1}`}

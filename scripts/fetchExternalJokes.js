@@ -16,12 +16,12 @@ async function fetchJokes() {
   $("article p").each((_, el) => {
     const text = $(el).text().trim();
     if (/^\d+\s*:/.test(text)) {
-      jokes.push({ id: jokes.length + 1, text });
+      jokes.push({ id: jokes.length + 10, text });
     }
   });
 
   fs.writeFileSync(
-    "./data/external-jokes.json",
+    "./data/external-jokes-2.json",
     JSON.stringify(jokes, null, 2)
   );
 

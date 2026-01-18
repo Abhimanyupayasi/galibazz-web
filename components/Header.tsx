@@ -32,7 +32,7 @@ const dict = {
         name: "Sahitya",
         links: [
           { name: "Shayari", href: "/upcoming" },
-          { name: "Stories", href: "/upcoming" },
+          { name: "Stories", href: "/hi/sahitya/stories" },
           { name: "Kavita", href: "/upcoming" },
         ],
       },
@@ -72,7 +72,7 @@ const dict = {
         name: "साहित्य",
         links: [
           { name: "शायरी", href: "/hi/news" },
-          { name: "कहानियाँ", href: "/hi/upcoming" },
+          { name: "कहानियाँ", href: "/hi/sahitya/stories" },
           { name: "कविता", href: "/hi/upcoming" },
         ],
       },
