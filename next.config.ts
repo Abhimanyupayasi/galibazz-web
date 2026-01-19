@@ -10,12 +10,11 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Applies to sitemap.xml and sitemap2.xml
         source: "/sitemap(.*).xml",
         headers: [
           {
-            key: "Content-Encoding",
-            value: "identity",
+            key: "Content-Type",
+            value: "application/xml; charset=utf-8",
           },
         ],
       },
