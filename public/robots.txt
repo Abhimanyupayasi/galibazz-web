@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://galibazz.lol/sitemap.xml
+Sitemap: https://galibazz.lol/sitemap2.xml
