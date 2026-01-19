@@ -26,21 +26,28 @@ const urls = [
 function generateSitemap() {
   const lastmod = new Date().toISOString();
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+  // IMPORTANT: XML declaration must be first character — no newline before it
+  const xml =
+`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
-  .map(
-    (url) => `
+${urls.map(url => `
   <url>
     <loc>${BASE_URL}${url}</loc>
     <lastmod>${lastmod}</lastmod>
-  </url>`
-  )
-  .join("")}
+  </url>`).join("")}
 </urlset>`;
 
-  const filePath = path.join(process.cwd(), "public", "sitemap.xml");
-  fs.writeFileSync(filePath, xml.trim());
+  const publicDir = path.join(process.cwd(), "public");
+
+  // Ensure public folder exists
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir);
+  }
+
+  const filePath = path.join(publicDir, "sitemap.xml");
+
+  // Write without trim → prevents encoding issues
+  fs.writeFileSync(filePath, xml);
 
   console.log("✅ sitemap.xml generated");
 }
