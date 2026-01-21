@@ -4,6 +4,8 @@ import ExploreHero from "@/components/ExploreHero";
 import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
+import GalibazzAIHero from "@/components/GalibazzAIHero";
+
 
 export default function Page() {
   return (
@@ -20,8 +22,9 @@ export default function Page() {
               Explore Categories
             </span>
           </div> */}
-
+         
           <ExploreHero />
+           <GalibazzAIHero />
           <CategoryGrid />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
