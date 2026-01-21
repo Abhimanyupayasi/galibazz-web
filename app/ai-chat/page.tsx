@@ -15,10 +15,21 @@ export default function AIChat() {
 
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  // Load remaining count from localStorage
+  // ✅ Daily Reset Check
   useEffect(() => {
-    const saved = localStorage.getItem("galibazz_chat_remaining");
-    if (saved) setRemaining(Number(saved));
+    const savedRemaining = localStorage.getItem("galibazz_chat_remaining");
+    const lastReset = localStorage.getItem("galibazz_chat_last_reset");
+
+    const today = new Date().toDateString();
+
+    if (lastReset !== today) {
+      // New day → reset quota
+      localStorage.setItem("galibazz_chat_remaining", MAX_FREE_CHATS.toString());
+      localStorage.setItem("galibazz_chat_last_reset", today);
+      setRemaining(MAX_FREE_CHATS);
+    } else if (savedRemaining) {
+      setRemaining(Number(savedRemaining));
+    }
   }, []);
 
   // Save remaining count
@@ -103,7 +114,7 @@ export default function AIChat() {
           placeholder={
             remaining > 0
               ? "Ask for a joke..."
-              : "Free limit finished 🙂"
+              : "आपका आज का फ्री quota खत्म हो गया 😅 कल फिर मिलते हैं!"
           }
           disabled={remaining <= 0 || loading}
           onKeyDown={(e) => e.key === "Enter" && send()}
