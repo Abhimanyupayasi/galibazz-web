@@ -5,6 +5,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
 import GalibazzAIHero from "@/components/GalibazzAIHero";
+import { Skiper39 } from "@/components/ui/skiper-ui/skiper39";
 
 
 export default function Page() {
@@ -22,7 +23,7 @@ export default function Page() {
               Explore Categories
             </span>
           </div> */}
-         
+       
           <ExploreHero />
            <GalibazzAIHero />
           <CategoryGrid />
@@ -33,6 +34,9 @@ export default function Page() {
           </div>
         </div>
       </main>
+       {/* <div className="h-[400px] overflow-hidden w-[100%] flex justify-center border-black border-[2px] items-center mb-1">
+          <Skiper39 />
+        </div> */}
       <Footer />
     </>
   );
