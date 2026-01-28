@@ -13,13 +13,100 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Galibazz - Explore Categories",
-  description: "Your versatile content hub. From hilarious jokes and 'fake news' satire to deep-dive education and AdSense strategies.",
+  metadataBase: new URL("https://www.galibazz.lol"),
+
+  title: {
+    default: "GaliBazz – Funny Jokes, News & Entertainment",
+    template: "%s | GaliBazz",
+  },
+
+  description:
+    "Welcome to GaliBazz – your fun corner of the internet. Laugh, read, and express without filters. Funny jokes, viral news, sahitya and entertainment.",
+
+  keywords: [
+    "galibazz",
+    "funny jokes",
+    "bad jokes",
+    "hindi jokes",
+    "english jokes",
+    "viral news",
+    "entertainment",
+    "sahitya",
+    "humor website"
+  ],
+
+  alternates: {
+    canonical: "https://www.galibazz.lol/",
+  },
+
+  authors: [
+    { name: "GaliBazz Team", url: "https://www.galibazz.lol" }
+  ],
+
+  creator: "GaliBazz",
+  publisher: "GaliBazz",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.galibazz.lol/",
+    title: "GaliBazz – Funny Jokes, News & Entertainment",
+    description:
+      "Laugh, read and express without filters. Explore jokes, news, sahitya and entertainment on GaliBazz.",
+    siteName: "GaliBazz",
+    images: [
+      {
+        url: "https://old.galibazz.lol/favicon/favicon-32x32.png",
+        width: 32,
+        height: 32,
+        alt: "GaliBazz logo",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary",
+    title: "GaliBazz – Funny Jokes, News & Entertainment",
+    description:
+      "Your fun corner of the internet. Funny jokes, viral news & entertainment.",
+    images: ["https://old.galibazz.lol/favicon/favicon-32x32.png"],
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "https://old.galibazz.lol/favicon/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "https://old.galibazz.lol/favicon/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "https://old.galibazz.lol/favicon/favicon.ico",
+      },
+    ],
+    apple: "https://old.galibazz.lol/favicon/apple-touch-icon.png",
+  },
+
   other: {
     "google-adsense-account": "ca-pub-4665029971539939",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

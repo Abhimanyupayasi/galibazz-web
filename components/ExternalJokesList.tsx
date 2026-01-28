@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import JokeShareBar from "@/components/JokeShareBar";
+import defaultJokes from "@/data/external-jokes.json"; // ✅ fallback JSON
 
 type Joke = {
   id: number;
@@ -8,15 +9,6 @@ type Joke = {
 };
 
 const JOKES_PER_PAGE = 10;
-
-async function getExternalJokes(): Promise<Joke[]> {
-  const res = await fetch("http://localhost:3000/api/external-jokes", {
-    cache: "no-store",
-  });
-
-  if (!res.ok) return [];
-  return res.json();
-}
 
 // break on comma
 function formatJoke(text: string) {
@@ -29,21 +21,22 @@ function formatJoke(text: string) {
 
 export default async function ExternalJokesList({
   page,
+  data,
 }: {
   page: number;
+  data?: Joke[]; // ✅ optional external JSON
 }) {
-  const jokes = await getExternalJokes();
+  // ✅ If data passed use it, otherwise fallback to default
+  const jokes: Joke[] = data && data.length > 0 ? data : defaultJokes;
 
   const totalPages = Math.ceil(jokes.length / JOKES_PER_PAGE);
   const start = (page - 1) * JOKES_PER_PAGE;
   const paginated = jokes.slice(start, start + JOKES_PER_PAGE);
 
-  // current page url for sharing
   const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/en/jokes/external?page=${page}`;
 
   return (
     <section className="max-w-4xl mx-auto px-4 space-y-6">
-
       {paginated.map((joke) => (
         <div
           key={joke.id}
@@ -51,7 +44,6 @@ export default async function ExternalJokesList({
         >
           {formatJoke(joke.text)}
 
-          {/* Copy + Share bar */}
           <div className="mt-4">
             <JokeShareBar text={joke.text} pageUrl={pageUrl} />
           </div>
@@ -61,7 +53,6 @@ export default async function ExternalJokesList({
       {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-4 pt-8">
-
           {page > 1 && (
             <Link
               href={`?page=${page - 1}`}
