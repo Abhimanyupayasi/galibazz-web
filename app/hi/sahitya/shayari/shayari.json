@@ -64,4 +64,30 @@
 
 
     ]
-  }]
+  },
+
+  {
+    "title": "Kabir Ke Dohe - Adult Humor",
+    "description": "Best Kabir ke dohe adult humor jokes in Hindi.",
+    "slug": "kabir-ke-dohe-adult",
+    "image": "https://i.pinimg.com/736x/7e/fb/04/7efb04a3d1e58f3d51a485f45dd98668.jpg",
+    "seo": {
+      "title": "Kabir Ke Dohe Adult Jokes",
+      "description": "Funny Kabir ke dohe adult Hindi jokes collection.",
+      "ogTitle": "Kabir Ke Dohe Adult",
+      "ogDescription": "Classic Kabir style adult humor jokes.",
+      "twitterTitle": "Kabir Dohe Jokes",
+      "twitterDescription": "Hindi Kabir dohe adult jokes."
+    },
+    "jokes": [
+      "1. Kal chode so aj chod, aaj chode so ab,\nbiwi to chudTi rahegi, padosan chodega kab !",
+      "2. Esi ladki chodiye, lund ka aapa khoye,\nauro se chudi na ho , biwi wo hi hoye",
+      "3. badha hua to kya hua, tera lund huzur,\nhamne bhi to ladkiyo se, majje liye bharpoor!",
+      "4. kuwari kali na chodiye,\nchud pe kare ghamand,\nchudi chudai chodiye,\njo lapak ke leve lund!",
+      "5. karat karat chudai,\nlund hot balwan,\nchut me aawat jawat se,\nlund bane mahan!",
+      "6. chodte chodte subha hogyi,\nlund pe padh pe padh gye chhale,\nchut fat ke ghufa hogyi,\nwahh re chodne wale! "
+      
+    ]
+  }
+
+]
