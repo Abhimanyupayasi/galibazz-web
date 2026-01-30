@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-
+.package-lock.json
 # next.js
 /.next/
 /out/
@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+public
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+package-lock.json
+package-lock.json

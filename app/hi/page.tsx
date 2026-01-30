@@ -4,6 +4,58 @@ import ExploreHero from "@/components/ExploreHero";
 import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: {
+     absolute: "Galibazz Hindi – Funny Jokes, Dirty Jokes & Entertainment",
+  },
+
+  description:
+    "Welcome to Galibazz Hindi – explore funny jokes, dirty jokes, viral news, sahitya and entertainment in Hindi. Laugh every day with Galibazz.",
+
+  keywords: [
+    "galibazz",
+    "hindi jokes",
+    "dirty jokes",
+    "funny jokes",
+    "adult jokes",
+    "viral news",
+    "sahitya",
+    "hindi entertainment"
+  ],
+
+  alternates: {
+    canonical: "https://www.galibazz.lol/hi",
+  },
+
+  openGraph: {
+    title: "Galibazz Hindi – Funny Jokes & Dirty Jokes",
+    description:
+      "Laugh out loud with Galibazz Hindi. Explore funny jokes, dirty jokes, sahitya and entertainment content in Hindi.",
+    url: "https://www.galibazz.lol/hi",
+    siteName: "GaliBazz",
+    type: "website",
+    images: [
+      {
+        url: "https://old.galibazz.lol/favicon/favicon-32x32.png",
+        width: 32,
+        height: 32,
+        alt: "Galibazz Hindi",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Galibazz Hindi – Funny & Dirty Jokes",
+    description:
+      "Best Hindi jokes collection on Galibazz. Funny, dirty and adult Hindi jokes updated daily.",
+    images: ["https://old.galibazz.lol/favicon/favicon-32x32.png"],
+  },
+};
+
 
 export default function Page() {
   const isHindi = true; // because this route = /hi

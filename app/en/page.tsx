@@ -5,6 +5,56 @@ import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Galibazz – Funny Jokes, Dirty Jokes & Entertainment",
+
+  description:
+    "Welcome to Galibazz – explore funny jokes, dirty jokes, viral news, entertainment and humor content. Laugh every day with Galibazz.",
+
+  keywords: [
+    "galibazz",
+    "jokes",
+    "dirty jokes",
+    "funny jokes",
+    "adult jokes",
+    "viral news",
+    "entertainment",
+    "humor website"
+  ],
+
+  alternates: {
+    canonical: "https://www.galibazz.lol/en",
+  },
+
+  openGraph: {
+    title: "Galibazz – Funny Jokes & Dirty Jokes",
+    description:
+      "Laugh out loud with Galibazz. Funny jokes, dirty jokes, viral content and entertainment updated daily.",
+    url: "https://www.galibazz.lol/en",
+    siteName: "GaliBazz",
+    type: "website",
+    images: [
+      {
+        url: "https://old.galibazz.lol/favicon/favicon-32x32.png",
+        width: 32,
+        height: 32,
+        alt: "Galibazz Logo",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary",
+    title: "Galibazz – Funny & Dirty Jokes",
+    description:
+      "Best place for funny and dirty jokes. Updated daily on Galibazz.",
+    images: ["https://old.galibazz.lol/favicon/favicon-32x32.png"],
+  },
+};
+
+
 export default function Page() {
   return (
     <>
