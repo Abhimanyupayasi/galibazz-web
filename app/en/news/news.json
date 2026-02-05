@@ -1,36 +1,40 @@
 [
   {
-    "slug": "bhai-ka-viral-jugaad",
-    "poster": "https://picsum.photos/seed/jugaad/800/450",
-    "title": "Bhai ka viral jugaad dekh ke netizens bole – legend!",
-    "author": "Galibazz Desk",
-    "date": "2026-01-10",
-    "time": "10:30 AM",
-    "type": "news",
-    "what": "viral",
-    "tags": ["jugaad", "viral", "desi", "engineering", "trending"],
-    "description": [
-      "Bhai ne jo jugaad lagaya hai wo dekh ke public pagal ho gayi.",
-      "Video viral hote hi comment section mein memes ki baarish ho gayi.",
-      "Log keh rahe hain – bhai future engineer hai!"
-    ]
-  },
-  {
-    "slug": "ladke-ka-joke-internet-tod-gaya-1",
-    "poster": "https://picsum.photos/seed/joke/800/450",
-    "title": "Is ladke ka joke sun ke pura internet hil gaya",
-    "author": "Viral Baba",
-    "date": "2026-01-09",
-    "time": "08:15 PM",
-    "type": "news",
-    "what": "hot",
-    "tags": ["joke", "comedy", "standup", "trending"],
-    "description": [
-      "Stage pe khade hote hi ladke ne ek aisa joke maara.",
-      "Audience hans hans ke lotpot ho gayi.",
-      "Clip ab har social media platform pe ghoom rahi hai."
-    ]
-  },
+  "slug": "kamar-ki-ek-anokhi-kahani",
+  "poster": "https://i.pinimg.com/736x/d2/fb/4f/d2fb4fc93c9cc8f7772bba180f8ce3e1.jpg",
+  "title": "Kamar ki anokhi kahani !",
+  "author": "Galibazz Desk",
+  "date": "2026-01-10",
+  "time": "10:30 AM",
+  "type": "news",
+  "what": "viral",
+  "tags": ["funny", "viral", "desi-humor", "husband-wife", "jokes"],
+  "description": [
+    "Apne badan ko dekh kar wife apne husband se boli – pehle meri kamar Pepsi ki bottle jaisi thi.",
+    "Sasural aate hi bura haal ho gaya, aisa keh kar thoda emotional ho gayi.",
+    "Husband ne muskura ke jawab diya – abhi bhi tumhari kamar Pepsi ki bottle jaisi hi hai.",
+    "Bas fark itna hai ki pehle 300 ml thi, aur ab seedha 2 litre ho gayi hai 😂"
+  ]
+}
+,
+ {
+  "slug": "The-couple-is-rumoured-to-marry",
+  "poster": "https://i.pinimg.com/736x/6d/94/97/6d94979f141ed86c0915e784606a3c3a.jpg",
+  "title": "The couple is rumoured to marry on February _**_, 2026, at ______ Palace",
+  "author": "Viral Baba",
+  "date": "2026-02-05",
+  "time": "08:15 PM",
+  "type": "news",
+  "what": "hot",
+  "tags": ["joke", "comedy", "standup", "trending"],
+  "description": [
+    "Actors Rashmika Mandanna aur Vijay Deverakonda apne kaafi time se charchit relationship ko lekar ek baar phir headlines mein hain.",
+    "Nayi reports ke mutabik, kaha ja raha hai ki yeh couple secretly engaged ho chuka hai.",
+    "Social media par posts tezi se viral ho rahi hain, jismein daawa kiya ja raha hai ki dono stars 26 February 2026 ko Udaipur Palace mein shaadi kar sakte hain.",
+    "In reports ke baad internet par speculation ka silsila aur bhi zyada tez ho gaya hai."
+  ]
+}
+,
   {
     "slug": "ladke-ka-joke-internet-tod-gaya-2",
     "poster": "https://i.pinimg.com/1200x/c1/47/3a/c1473a187ff4a83477f103c04c75cb86.jpg",
