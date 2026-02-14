@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import newsData from "../news.json";
 
 interface PageProps {
@@ -17,15 +18,20 @@ export default async function NewsDetailPage({ params }: PageProps) {
   }
 
   return (
-    <article className="min-h-screen bg-black text-white px-6 py-10">
-      <div className="max-w-4xl mx-auto">
+    <article className="min-h-screen bg-black text-white  ">
+      <Header/>
+      <div className="max-w-4xl mx-auto py-10 px-4" >
+        {/* Title */}
+        <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6">
+          {news.title}
+        </h1>
 
         {/* Image */}
-        <div className="rounded-3xl overflow-hidden mb-8 border border-zinc-800">
+        <div className="rounded-3xl flex justify-center items-center w-full overflow-hidden mb-8  ">
           <img
             src={news.poster}
             alt={news.title}
-            className="w-full object-cover"
+            className="w-6/12 object-cover"
           />
         </div>
 
@@ -39,10 +45,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
           <span>⏰ {news.time}</span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-6">
-          {news.title}
-        </h1>
+        
 
         {/* Content */}
         <div className="space-y-5 text-lg text-zinc-200 leading-relaxed">
