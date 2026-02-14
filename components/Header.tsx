@@ -161,7 +161,7 @@ const switchPath = lang === "hi"
             <div className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="text-sm font-semibold px-3 py-1 rounded-md border border-gray-300 hover:border-green-500 hover:text-green-600 transition flex items-center gap-1"
+                className="text-sm text-black font-semibold px-3 py-1 rounded-md border border-gray-300 hover:border-green-500 hover:text-green-600 transition flex items-center gap-1"
               >
                 {t.language}
                 <span className="material-symbols-outlined text-[18px]">
@@ -170,7 +170,7 @@ const switchPath = lang === "hi"
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 mt-2 w-28 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                <div className="absolute right-0 mt-2 w-28 bg-white border border-gray-200 text-black rounded-lg shadow-lg z-50">
                   <Link
                     href={switchPath}
                     className="block px-3 py-2 text-sm hover:bg-gray-50 hover:text-green-600"
@@ -192,13 +192,13 @@ const switchPath = lang === "hi"
           </div>
 
           {/* MOBILE RIGHT */}
-          <div className="lg:hidden flex items-center gap-2">
+          <div className="lg:hidden text-black flex items-center gap-2">
 
             {/* Mobile Language */}
             <div className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="text-xs font-semibold px-2 py-1 rounded border border-gray-300 hover:border-green-500 hover:text-green-600 flex items-center gap-1"
+                className="text-xs font-semibold px-2 py-1 rounded border border-gray-300 hover:border-green-500 text-black hover:text-green-600 flex items-center gap-1"
               >
                 {lang === "hi" ? "हिंदी" : "EN"}
                 <span className="material-symbols-outlined text-[16px]">
@@ -207,7 +207,7 @@ const switchPath = lang === "hi"
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 mt-1 w-20 bg-white border border-gray-200 rounded-md shadow-md z-50">
+                <div className="absolute right-0 text-black mt-1 w-20 bg-white border border-gray-200 rounded-md shadow-md z-50">
                   <Link
                     href={switchPath}
                     className="block px-2 py-2 text-xs hover:bg-gray-50 hover:text-green-600"
