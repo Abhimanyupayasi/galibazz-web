@@ -25,7 +25,7 @@ const dict = {
         links: [
           { name: "Latest News", href: "/en/news" },
           { name: "Fake News", href: "/upcoming" },
-          { name: "Youth News", href: "/upcoming" },
+          { name: "Viral News", href: "/upcoming" },
         ],
       },
       {
@@ -65,7 +65,7 @@ const dict = {
         links: [
           { name: "ताज़ा खबर", href: "/hi/news" },
           { name: "फेक न्यूज़", href: "/hi/news" },
-          { name: "युवा न्यूज़", href: "/hi/news" },
+          { name: "वायरल न्यूज़", href: "/hi/news" },
         ],
       },
       {
