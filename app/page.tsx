@@ -6,6 +6,7 @@ import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
 import GalibazzAIHero from "@/components/GalibazzAIHero";
 import { Skiper39 } from "@/components/ui/skiper-ui/skiper39";
+import Image from "next/image";
 
 
 export default function Page() {
@@ -13,6 +14,15 @@ export default function Page() {
     <>
       <Header />
       <main className="grow w-full bg-background-light">
+        {/* <div>
+          <Image
+            src={"/imgs/home.png"}
+            alt="Galibazz AI Hero"
+            width={1280}
+            height={400}
+            className="w-full h-[300px] object-cover"
+          />
+        </div> */}
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           {/* <div className="flex items-center gap-2 text-sm mb-8 sm:mb-10 text-text-muted">
             <a className="hover:text-primary transition-colors" href="#">
@@ -26,11 +36,11 @@ export default function Page() {
        
           <ExploreHero />
            <GalibazzAIHero />
-          <CategoryGrid />
+          {/* <CategoryGrid /> */}
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
+          <div className="">
             <FreshContent />
-            <Sidebar />
+            {/* <Sidebar /> */}
           </div>
         </div>
       </main>
