@@ -6,6 +6,7 @@ import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
 
 import type { Metadata } from "next";
+import GalibazzAIHero from "@/components/GalibazzAIHero";
 
 export const metadata: Metadata = {
   title: "Galibazz – Funny Jokes, Dirty Jokes & Entertainment",
@@ -72,11 +73,12 @@ export default function Page() {
           </div> */}
 
           <ExploreHero />
-          <CategoryGrid />
+          <GalibazzAIHero />
+          {/* <CategoryGrid /> */}
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
+          <div className="">
             <FreshContent />
-            <Sidebar />
+           
           </div>
         </div>
       </main>

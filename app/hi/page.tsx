@@ -5,6 +5,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
+import GalibazzAIHero from "@/components/GalibazzAIHero";
 
 
 export const metadata: Metadata = {
@@ -76,12 +77,12 @@ export default function Page() {
           <h2 className="text-3xl font-bold text-center mb-10">
             {text.exploreTitle}
           </h2>
+          <GalibazzAIHero />
+          {/* <CategoryGrid /> */}
 
-          <CategoryGrid />
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
+          <div className="">
             <FreshContent />
-            <Sidebar />
+            
           </div>
         </div>
       </main>
