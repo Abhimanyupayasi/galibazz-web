@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import bot from '../../imgs/icons8-bot-94.png'
@@ -34,7 +35,7 @@ export default function AIChat() {
         localStorage.removeItem(CHAT_STORAGE_KEY);
         localStorage.removeItem(CHAT_TIME_KEY);
       } else {
-        setMessages(JSON.parse(savedMessages));
+        requestAnimationFrame(() => setMessages(JSON.parse(savedMessages)));
       }
     }
   }, []);
@@ -61,9 +62,9 @@ export default function AIChat() {
     if (lastReset !== today) {
       localStorage.setItem("galibazz_chat_remaining", MAX_FREE_CHATS.toString());
       localStorage.setItem("galibazz_chat_last_reset", today);
-      setRemaining(MAX_FREE_CHATS);
+      requestAnimationFrame(() => setRemaining(MAX_FREE_CHATS));
     } else if (savedRemaining) {
-      setRemaining(Number(savedRemaining));
+      requestAnimationFrame(() => setRemaining(Number(savedRemaining)));
     }
   }, []);
 
@@ -115,7 +116,7 @@ export default function AIChat() {
     <div className="h-screen flex flex-col bg-neutral-100">
       <header className="h-14 bg-white shadow  px-4">
         <div className="font-bold flex items-center h-full text-lg">
-          <img src={bot.src} alt="Galibazz AI" className="inline h-10 w-10" />
+          <Image src={bot} alt="Galibazz AI" className="inline h-10 w-10" />
           <span className="pt-2">Galibazz AI Chat</span>
         </div>
         <div className="text-sm text-gray-500">

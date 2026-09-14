@@ -1,9 +1,10 @@
-const fs = require("fs");
-const cheerio = require("cheerio");
-
-function extractJokes() {
-  const html = fs.readFileSync("./scripts/lokhindi-rendered.html", "utf-8");
-  const $ = cheerio.load(html);
+async function extractJokes() {
+  const [{ readFileSync, writeFileSync }, { load }] = await Promise.all([
+    import("node:fs"),
+    import("cheerio"),
+  ]);
+  const html = readFileSync("./scripts/lokhindi-rendered.html", "utf-8");
+  const $ = load(html);
 
   const jokes = [];
 
@@ -28,7 +29,7 @@ function extractJokes() {
     });
   });
 
-  fs.writeFileSync(
+  writeFileSync(
     "./app/en/jokes/lokhindi-jokes.json",
     JSON.stringify(jokes, null, 2)
   );
@@ -36,4 +37,4 @@ function extractJokes() {
   console.log("✅ Extracted", jokes.length, "jokes starting from ID 21");
 }
 
-extractJokes();
+void extractJokes();

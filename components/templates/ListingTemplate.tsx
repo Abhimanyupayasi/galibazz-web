@@ -2,8 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 
-type Props = {
-  data: any[];
+export type ContentListItem = {
+  slug: string;
+  title: string;
+  description: string;
+  image: string;
+  jokes: string[];
+};
+
+export type ListingTemplateProps = {
+  data: ContentListItem[];
   basePath: string;
   title: string;
   hero?: React.ReactNode;
@@ -18,7 +26,7 @@ export default async function ListingTemplate({
   title,
   hero,
   searchParams,
-}: Props) {
+}: ListingTemplateProps) {
   const { page } = (await searchParams) || {};
   const currentPage = Number(page) || 1;
 

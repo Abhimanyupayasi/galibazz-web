@@ -2,7 +2,11 @@ import ListingTemplate from "@/components/templates/ListingTemplate";
 import jokes from "./jokes.json";
 import JokesHero from "@/components/JokesHero";
 
-export default function Page(props:any) {
+type PageProps = {
+  searchParams?: Promise<{ page?: string }>;
+};
+
+export default function Page(props: PageProps) {
   return (
     <ListingTemplate
       {...props}

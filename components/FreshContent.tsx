@@ -20,7 +20,7 @@ export default function FreshContent() {
   const baseRoute = isHindi ? "/hi/jokes" : "/en/jokes";
 
   // Get latest 6 categories
-  const latest = [...jokes].reverse().slice(0, 6);
+  const latest = [...jokes].reverse().slice(0, 12);
 
   return (
     <div className="lg:col-span-8 flex flex-col gap-8 sm:gap-10">
@@ -34,7 +34,7 @@ export default function FreshContent() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 lg:gap-x-6 lg:gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 sm:gap-7 lg:gap-x-6 lg:gap-y-12">
         {latest.map((item) => (
           <Link
             key={item.slug}

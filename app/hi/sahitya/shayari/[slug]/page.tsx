@@ -1,7 +1,12 @@
 import SlugTemplate from "@/components/templates/SlugTemplate";
 import sayri from "../shayari.json";
 
-export default function Page(props:any) {
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ page?: string }>;
+};
+
+export default function Page(props: PageProps) {
   return (
     <SlugTemplate
       {...props}

@@ -31,7 +31,7 @@ export default function Footer() {
         cookies: "Cookie Policy",
         contact: "Contact Us",
       },
-      copyright: "© 2024 Galibazz. All rights reserved.",
+      copyright: "© 2026 Galibazz. All rights reserved.",
       made: "Made with",
     },
     hi: {
@@ -56,7 +56,7 @@ export default function Footer() {
         cookies: "कुकी पॉलिसी",
         contact: "संपर्क करें",
       },
-      copyright: "© 2024 Galibazz. सभी अधिकार सुरक्षित।",
+      copyright: "© 2026 Galibazz. सभी अधिकार सुरक्षित।",
       made: "प्यार से बनाया गया",
     },
   };
@@ -73,13 +73,15 @@ export default function Footer() {
           {/* Logo + About */}
           <div className="lg:col-span-2">
             <Link href={`${base}`} className="flex items-center gap-2 mb-3 sm:mb-4">
-              <div className="flex items-center justify-center size-8 rounded-lg bg-primary text-text-dark">
-                <span className="material-symbols-outlined">sentiment_very_satisfied</span>
-              </div>
-              <span className="text-lg sm:text-xl font-black tracking-tight text-text-dark">
-                Galibazz
-              </span>
-            </Link>
+  <div className="flex items-center justify-center size-8 rounded-lg bg-yellow-200">
+    <span className="material-symbols-outlined text-yellow-800">
+      sentiment_very_satisfied
+    </span>
+  </div>
+  <span className="text-lg sm:text-xl font-black tracking-tight">
+    Galibazz
+  </span>
+</Link>
 
             <p className="text-xs sm:text-sm text-text-muted mb-4 sm:mb-6 max-w-sm leading-relaxed">
               {t.description}
