@@ -3,6 +3,10 @@ import jokes from "./jokes.json";
 import JokesHero from "@/components/JokesHero";
 import type { Metadata } from "next";
 
+type PageProps = {
+  searchParams?: Promise<{ page?: string }>;
+};
+
 export const metadata: Metadata = {
   title: "Galibazz Jokes – Dirty Jokes, Funny & Must-Read Jokes",
   
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page(props: any) {
+export default function Page(props: PageProps) {
   return (
     <ListingTemplate
       {...props}

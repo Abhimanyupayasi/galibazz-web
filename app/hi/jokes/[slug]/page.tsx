@@ -2,6 +2,11 @@ import SlugTemplate from "@/components/templates/SlugTemplate";
 import jokes from "../jokes.json";
 import type { Metadata } from "next";
 
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ page?: string }>;
+};
+
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
@@ -61,7 +66,7 @@ export async function generateMetadata(
 
 /* ===== Page Render ===== */
 
-export default function Page(props: any) {
+export default function Page(props: PageProps) {
   return (
     <SlugTemplate
       {...props}

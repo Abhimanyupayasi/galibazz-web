@@ -1,12 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExploreHero from "@/components/ExploreHero";
-import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
-import Sidebar from "@/components/Sidebar";
 import GalibazzAIHero from "@/components/GalibazzAIHero";
-import { Skiper39 } from "@/components/ui/skiper-ui/skiper39";
-import Image from "next/image";
 
 
 export default function Page() {

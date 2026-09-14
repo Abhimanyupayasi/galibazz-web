@@ -26,7 +26,7 @@ export default function HeroSection() {
             Explore <span className="text-primary">Galibazz</span>
           </h1>
           <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-            Your versatile content hub. From hilarious jokes and "fake news" satire to deep-dive education and AdSense strategies. Learning and laughing in one place.
+            Your versatile content hub. From hilarious jokes and &quot;fake news&quot; satire to deep-dive education and AdSense strategies. Learning and laughing in one place.
           </p>
         </div>
         <div className="flex items-center gap-3 flex-shrink-0">

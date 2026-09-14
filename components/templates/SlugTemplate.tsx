@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import JokeShareBar from "@/components/JokeShareBar";
 
-type Props = {
-  data: any[];
+import type { ContentListItem } from "./ListingTemplate";
+
+export type SlugTemplateProps = {
+  data: ContentListItem[];
   basePath: string;
   params: Promise<{ slug: string }>;
   searchParams?: Promise<{ page?: string }>;
@@ -18,7 +20,7 @@ export default async function SlugTemplate({
   basePath,
   params,
   searchParams,
-}: Props) {
+}: SlugTemplateProps) {
   const { slug } = await params;
   const { page } = (await searchParams) || {};
 

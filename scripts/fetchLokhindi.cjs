@@ -1,11 +1,12 @@
-const fs = require("fs");
-const puppeteer = require("puppeteer");
-
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function renderPage() {
+  const [{ writeFileSync }, { default: puppeteer }] = await Promise.all([
+    import("node:fs"),
+    import("puppeteer"),
+  ]);
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -27,7 +28,7 @@ async function renderPage() {
 
   // Save rendered HTML
   const html = await page.content();
-  fs.writeFileSync("./scripts/lokhindi-rendered.html", html);
+  writeFileSync("./scripts/lokhindi-rendered.html", html);
 
   console.log("✅ Rendered HTML saved at scripts/lokhindi-rendered.html");
 

@@ -1,7 +1,11 @@
 import ListingTemplate from "@/components/templates/ListingTemplate";
 import sayri from "./shayari.json";
 
-export default function Page(props:any) {
+type PageProps = {
+  searchParams?: Promise<{ page?: string }>;
+};
+
+export default function Page(props: PageProps) {
   return (
     <ListingTemplate
       {...props}

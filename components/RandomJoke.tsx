@@ -9,7 +9,7 @@ export default function RandomJoke() {
   useEffect(() => {
     const random =
       randomJokes[Math.floor(Math.random() * randomJokes.length)];
-    setJoke(random.joke);
+    requestAnimationFrame(() => setJoke(random.joke));
   }, []);
 
   return (

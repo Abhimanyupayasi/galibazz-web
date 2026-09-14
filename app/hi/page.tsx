@@ -1,9 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExploreHero from "@/components/ExploreHero";
-import CategoryGrid from "@/components/CategoryGrid";
 import FreshContent from "@/components/FreshContent";
-import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 import GalibazzAIHero from "@/components/GalibazzAIHero";
 
