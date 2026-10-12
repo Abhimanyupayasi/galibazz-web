@@ -2,7 +2,7 @@
   {
     "title": "Light-hearted Hindi Couplets",
     "description": "Original, family-friendly Hindi couplets about everyday life and learning.",
-    "slug": "kabir-ke-dohe-adult",
+    "slug": "hindi-hasya-dohe",
     "image": "https://i.pinimg.com/736x/7e/fb/04/7efb04a3d1e58f3d51a485f45dd98668.jpg",
     "seo": {
       "title": "Light-hearted Hindi Couplets",
@@ -13,55 +13,34 @@
       "twitterDescription": "Short, original Hindi couplets about everyday life."
     },
     "jokes": [
-      "1. The morning sun peeked through the window and said, \"Rise and shine!\"\nMy pillow replied, \"Give us five more minutes.\"",
-      "2. My tea asked why I was late.\nI said I had a long meeting with my dreams.",
-      "3. A book said, \"Open me and learn something new.\"\nSleep said, \"I have a lesson for you too.\"",
-      "4. I packed an umbrella for the rain,\nthen left it at home and got a fresh hairstyle.",
-      "5. A little patience goes a long way,\nespecially when the kettle is slow today.",
-      "6. My wallet felt brave until the bill arrived;\nthen even the coins went quiet."
-      
+      "सुबह की चाय ने पूछा, इतनी देर से क्यों आए? मैंने कहा, अलार्म से सपने की बात कर रहा था।",
+      "मां ने पूछा, कमरा इतना बिखरा क्यों है? बेटा बोला, चीजें अपनी जगह ढूंढ रही हैं।",
+      "शिक्षक ने पूछा, सबसे तेज क्या चलता है? छात्र बोला, छुट्टी की घंटी!",
+      "दोस्त ने पूछा, पौधा इतना हरा कैसे है? मैंने कहा, उसे रोज पानी देता हूं।",
+      "बारिश आई, छाता घर पर रह गया; मौसम ने कहा, आज का अंदाज बदल गया।",
+      "किताब बोली, मुझे खोलो; नींद बोली, पहले मेरी सुनो।"
     ]
   },
-
   {
-    "title": "Double Meaning Shayari",
-    "description": "Double meaning jokes and shayari in Hindi.",
-    "slug": "double-meaning-shayari",
+    "title": "स्वच्छ हिंदी हास्य",
+    "description": "परिवार के साथ पढ़ने योग्य मौलिक हास्य सामग्री।",
+    "slug": "hindi-wordplay-shayari",
     "image": "https://i.pinimg.com/736x/4c/19/46/4c19463eafe3632d17b1c56a4c3ab078.jpg",
     "seo": {
-      "title": "Double Meaning Jokes Hindi",
-      "description": "Best Hindi double meaning jokes and shayari.",
-      "ogTitle": "Double Meaning Shayari",
-      "ogDescription": "Fun double meaning Hindi jokes.",
-      "twitterTitle": "Double Meaning Jokes",
-      "twitterDescription": "Hindi double meaning shayari jokes."
+      "title": "स्वच्छ हिंदी हास्य",
+      "description": "परिवार के साथ पढ़ने योग्य मौलिक हास्य सामग्री।",
+      "ogTitle": "स्वच्छ हिंदी हास्य",
+      "ogDescription": "परिवार के साथ पढ़ने योग्य मौलिक हास्य सामग्री।",
+      "twitterTitle": "स्वच्छ हिंदी हास्य",
+      "twitterDescription": "परिवार के साथ पढ़ने योग्य मौलिक हास्य सामग्री।"
     },
-    "jokes": [ 
- "1. Mangta hun to deti nahi ho,\nJawab meri baat ka\naur deti ho to khada ho jata hai\nrom rom mere jazbaat ka,\nmuhh me lena tumhe asand nahi ,\nek bhi katra sharab ka\nfir kyu bolti ho dheere se dalo ,\nbalo me fool gulab ka\nvo soti rhi me karta rha\nintezaar uske jawab ka,\nabhi uske hath me rakha hi tha ki usne pakad liya,\nguldasta gulab ka,\nusne kaha pichhe se nahi aage se karo,\ndeedar mere husn-o-sharab ka,\nusne kaha badha majja ata hai jab andar jata hai,\nkano me ek ek lavj tere pyar ka!",
-
-"2.Lita kar unko niche ham sari rat dabate rahe\nunke sar ke dard ko ham is tarah mitate rahe.",
-
-"3. utha kr karo ,sar jhukakar karo,\nleta kar karo ,\nage pichhe dono tarah se karo,\njitna kroge utna achha mehsus hoga,\nkitne fayde hai baba ramdev ji ke yog ke.",
-
-"4.usne kaha aur dabao, mene aur dabaya\nusne kaha baniyan nikal do ,fir dabao,mene fir dabaya\nusne kaha pent bhi nikal do, fir dabao, mene fir dabao\ndekha ho gya na suitcase band",
-
-"5.arz kiya hai,\nbadal garja shor ke sath\nbarish bhi hui bade jor ke sath\njara dhyan rakhna apnigirlfriend ka\nkahi bhag na jaye kisi or ke sath",
-
-"6.jab pakad kar uska thora sa hath\ntab jakar hakim nabz ki janch kar paya.",
-
-"ankho me kajal hotho pe lali\ndil todkar chali gyi chudail sali",
-
-"ankho me kajal hotho pe lali\ndil todkar chali gyi chudail sali",
-
-"sula kar lu\nya bitha kar lu?\nya tujhe karu khada,\nya fir teri jhuka jhuka ke lu?\nab tu hi bta ki me ter photo kaise lu.",
-
-"ek bar kro na please,\nkisi ko pata nahi chalega,\nplease karo na, mujhe achha lagega\nek bar hmari dosti ke khatir,\nkaro please , ek praya sa SMS ek bar karo na please",
-
-" kuchh to tha uske hotho par\nna jane ham se kyu sharmati thi\nek din hasi tab pata chala\nkamini tambaco khati thi.",
-
-"tumhari aadao aur nigaho ne\njaneman kiya hai esa asar,\nki sapne me bhi aa jao,\nto jate hai priye ham dar"
-
-
-
+    "jokes": [
+      "सुबह की चाय ने पूछा, इतनी देर से क्यों आए? मैंने कहा, अलार्म से सपने की बात कर रहा था।",
+      "मां ने पूछा, कमरा इतना बिखरा क्यों है? बेटा बोला, चीजें अपनी जगह ढूंढ रही हैं।",
+      "शिक्षक ने पूछा, सबसे तेज क्या चलता है? छात्र बोला, छुट्टी की घंटी!",
+      "दोस्त ने पूछा, पौधा इतना हरा कैसे है? मैंने कहा, उसे रोज पानी देता हूं।",
+      "बारिश आई, छाता घर पर रह गया; मौसम ने कहा, आज का अंदाज बदल गया।",
+      "किताब बोली, मुझे खोलो; नींद बोली, पहले मेरी सुनो।"
     ]
-  }]
+  }
+]
